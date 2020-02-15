@@ -1,6 +1,8 @@
 package main;
 
+import marine.Fish;
 import marine.FishFactory;
+import marine.FishInterface;
 
 public class Application {
 
@@ -30,6 +32,10 @@ public class Application {
 		
 		FishFactory factory = new FishFactory();
 		System.out.println(factory.getFish("River fish", "Sea fish", 2, "River"));
+		FishInterface f = factory.getFish("River fish", "Sea fish", 2, "River");
+		
+		// ???? cloneFish( ???? ...)
+		Fish fact = factory.cloneFish(f);
 		
 		
 
